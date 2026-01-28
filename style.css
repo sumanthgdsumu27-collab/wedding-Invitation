@@ -6,7 +6,7 @@ body {background:#fff5f8; color:#333; line-height:1.6; overflow-x:hidden;}
 .hero {
     position: relative;
     height: 100vh; /* Full screen */
-    background-image: url("bg.jpg"); /* your image */
+    background-image: url("bg.jpeg"); /* your image */
     background-size: cover;          /* fill screen */
     background-position: center;     /* center image */
     background-repeat: no-repeat;
@@ -240,4 +240,5 @@ body {background:#fff5f8; color:#333; line-height:1.6; overflow-x:hidden;}
     .time-card{min-width:60px; padding:15px 20px;}
     .separator{margin:0 3px;}
 }
+
 
