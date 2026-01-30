@@ -104,26 +104,36 @@
     </iframe>
 </section>
 <section class="attendance">
-    <h2>🗳️ Attending For</h2>
+    <h2>🗳️ Will You Be Attending?</h2>
+    <p class="attendance-subtitle">
+        Please let us know your presence. Your response means a lot to us 💖
+    </p>
 
-    <form id="attendanceForm">
-        <label class="option">
+    <form id="attendanceForm" class="attendance-form">
+        <label class="attendance-card">
             <input type="radio" name="attendance" value="Wedding" required>
-            💍 Attending for Wedding
+            <span class="emoji">💍</span>
+            <span class="text">Wedding Only</span>
         </label>
 
-        <label class="option">
-            <input type="radio" name="attendance" value="Beegara Oothana">
-            🍽️ Attending for Beegara Oota
+        <label class="attendance-card">
+            <input type="radio" name="attendance" value="Beegara Oota">
+            <span class="emoji">🍽️</span>
+            <span class="text">Beegara Oota Only</span>
         </label>
 
-        <label class="option">
+        <label class="attendance-card">
             <input type="radio" name="attendance" value="Both">
-            🎉 Attending for Both
+            <span class="emoji">🎉</span>
+            <span class="text">Both Events</span>
         </label>
 
-        <button type="submit">Submit</button>
+        <button type="submit" class="attendance-btn">Submit Response</button>
     </form>
+
+    <p id="responseMsg" class="response-msg"></p>
+</section>
+
 
 <!-- ================= KANNADA VERSION ================= -->
 <section class="hero kannada-version">
@@ -200,6 +210,7 @@ updateCountdown();
 
 </body>
 </html>
+
 
 
 
