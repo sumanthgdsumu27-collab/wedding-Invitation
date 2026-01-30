@@ -343,5 +343,53 @@ body {
     .hero h1 { font-size: 3rem; }
     .hero h2 { font-size: 1.5rem; }
 }
+/* ===== KANNADA COUPLE NAME ANIMATION ===== */
+.couple-name-kannada {
+    font-size: 3.5rem;
+    letter-spacing: 0.2rem;
+    opacity: 0;
+    animation: kannadaReveal 2.8s ease-out forwards,
+               kannadaGlow 4s ease-in-out infinite;
+}
+
+/* Slide-up + fade-in */
+@keyframes kannadaReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+        letter-spacing: 0.6rem;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        letter-spacing: 0.2rem;
+    }
+}
+
+/* Traditional soft glow */
+@keyframes kannadaGlow {
+    0% {
+        text-shadow: 0 0 6px #ffd1dc;
+    }
+    50% {
+        text-shadow: 0 0 14px #ffffff, 0 0 25px #ffb6c1;
+    }
+    100% {
+        text-shadow: 0 0 6px #ffd1dc;
+    }
+}
+/* ===== GLOBAL SETTINGS ===== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ===== GLOBAL RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
 
 
