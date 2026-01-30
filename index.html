@@ -6,6 +6,11 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- Door Opening Intro -->
+<div class="door-intro">
+    <div class="door left-door"></div>
+    <div class="door right-door"></div>
+</div>
 
 <!-- ================= ENGLISH VERSION ================= -->
 <section class="hero">
@@ -220,9 +225,19 @@ function updateCountdown() {
 setInterval(updateCountdown, 1000);
 updateCountdown();
 </script>
+<script>
+window.addEventListener('load', () => {
+    const doors = document.querySelector('.door-intro');
+    // Wait for animation to finish (2.5s)
+    setTimeout(() => {
+        doors.classList.add('opened');
+    }, 2500);
+});
+</script>
 
 </body>
 </html>
+
 
 
 
