@@ -390,6 +390,52 @@ html {
     box-sizing: border-box;
     font-family: 'Segoe UI', sans-serif;
 }
+/* ===== DOOR OPENING ANIMATION ===== */
+.door-intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999; /* on top of everything */
+    display: flex;
+    overflow: hidden;
+}
+
+.door {
+    width: 50%;
+    height: 100%;
+    background: rgb(160, 116, 3); /* door color */
+    position: relative;
+}
+
+.left-door {
+    transform: translateX(0);
+    animation: openLeft 2s forwards;
+    animation-delay: 0.5s;
+}
+
+.right-door {
+    transform: translateX(0);
+    animation: openRight 2s forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes openLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes openRight {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(100%); }
+}
+
+/* Optional: hide after animation */
+.door-intro.opened {
+    display: none;
+}
+
 
 
 
