@@ -29,6 +29,39 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
+/* ===== COUPLE NAME ANIMATION ===== */
+.couple-name {
+    font-size: 4rem;
+    letter-spacing: 2px;
+    opacity: 0;
+    animation: nameReveal 2.5s ease-out forwards,
+               glowPulse 3s ease-in-out infinite;
+}
+
+/* Fade + Zoom In */
+@keyframes nameReveal {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Soft glowing effect */
+@keyframes glowPulse {
+    0% {
+        text-shadow: 0 0 8px #ffb6c1, 0 0 15px #ff69b4;
+    }
+    50% {
+        text-shadow: 0 0 15px #fff, 0 0 30px #ff69b4;
+    }
+    100% {
+        text-shadow: 0 0 8px #ffb6c1, 0 0 15px #ff69b4;
+    }
+}
 
 /* Dark overlay for readability */
 .hero .overlay {
@@ -310,4 +343,5 @@ body {
     .hero h1 { font-size: 3rem; }
     .hero h2 { font-size: 1.5rem; }
 }
+
 
