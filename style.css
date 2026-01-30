@@ -198,14 +198,103 @@ body {
     background: #fff0f5;
 }
 
-/* ===== ATTENDANCE ===== */
 .attendance {
-    padding: 50px 20px;
+    padding: 60px 20px;
     text-align: center;
-    background: #fff0f5;
-    border-radius: 20px;
-    margin: 40px 20px;
+    background: linear-gradient(135deg, #fff0f5, #ffe6f0);
+    border-radius: 25px;
+    margin: 50px 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
 }
+
+.attendance h2 {
+    color: #b22222;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.attendance-subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.attendance-form {
+    max-width: 500px;
+    margin: auto;
+    display: grid;
+    gap: 15px;
+}
+
+.attendance-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 20px;
+    background: #ffffff;
+    border-radius: 18px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transition: all 0.3s ease;
+}
+
+.attendance-card:hover {
+    transform: scale(1.03);
+}
+
+.attendance-card input {
+    display: none;
+}
+
+.attendance-card .emoji {
+    font-size: 1.8rem;
+}
+
+.attendance-card .text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Selected state */
+.attendance-card input:checked + .emoji,
+.attendance-card input:checked ~ .text {
+    color: #b22222;
+}
+
+.attendance-card input:checked ~ .text {
+    font-weight: bold;
+}
+
+.attendance-card:has(input:checked) {
+    border-color: #b22222;
+    background: #fff5f8;
+}
+
+.attendance-btn {
+    margin-top: 25px;
+    padding: 14px 35px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #b22222, #ff758c);
+    color: #fff;
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.attendance-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.response-msg {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #006400;
+}
+
 
 /* ===== FOOTER ===== */
 .footer {
@@ -221,3 +310,4 @@ body {
     .hero h1 { font-size: 3rem; }
     .hero h2 { font-size: 1.5rem; }
 }
+
