@@ -87,3 +87,33 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+window.scrollBy({
+  top: window.innerHeight,
+  behavior: "smooth"
+});
+document.addEventListener("DOMContentLoaded", function () {
+
+  const btn = document.getElementById("enterBtn");
+  const overlay = document.getElementById("musicOverlay");
+  const music = document.getElementById("bgMusic");
+
+  btn.addEventListener("click", function () {
+
+    music.play();
+
+    overlay.style.opacity = "0";
+
+    setTimeout(() => {
+      overlay.style.display = "none";
+
+      // Slow smooth scroll after entering
+      window.scrollTo({
+        top: window.innerHeight,
+        behavior: "smooth"
+      });
+
+    }, 500);
+
+  });
+
+});
