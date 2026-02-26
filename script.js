@@ -41,3 +41,15 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 });
+const music = document.getElementById("bgMusic");
+let musicStarted = false;
+
+function startMusic() {
+  if (!musicStarted && music) {
+    music.play().catch(() => {});
+    musicStarted = true;
+  }
+}
+
+window.addEventListener("scroll", startMusic);
+window.addEventListener("click", startMusic);
