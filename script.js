@@ -1,16 +1,11 @@
-// Wait until page fully loads
 document.addEventListener("DOMContentLoaded", function () {
 
-  /* ===========================
-     1. AUTOMATIC SCROLL ON LOAD
-     =========================== */
+  // Always start at top (first page)
+  window.scrollTo(0, 0);
 
-  setTimeout(function () {
-    window.scrollBy({
-      top: window.innerHeight,
-      behavior: "smooth"
-    });
-  }, 4000); // 2 seconds delay
+  // Disable browser scroll memory
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
 
-
-
+});
