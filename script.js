@@ -75,3 +75,15 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("scroll", startMusic, { once: true });
 
 });
+document.addEventListener("DOMContentLoaded", function () {
+
+  const btn = document.getElementById("enterBtn");
+  const overlay = document.getElementById("musicOverlay");
+  const music = document.getElementById("bgMusic");
+
+  btn.addEventListener("click", function () {
+    music.play();
+    overlay.style.display = "none";
+  });
+
+});
