@@ -53,3 +53,25 @@ function startMusic() {
 
 window.addEventListener("scroll", startMusic);
 window.addEventListener("click", startMusic);
+document.addEventListener("DOMContentLoaded", function () {
+
+  const music = document.getElementById("bgMusic");
+  let musicStarted = false;
+
+  function startMusic() {
+    if (!musicStarted && music) {
+      music.play().then(() => {
+        musicStarted = true;
+        console.log("Music started");
+      }).catch((err) => {
+        console.log("Playback prevented:", err);
+      });
+    }
+  }
+
+  // Multiple interaction triggers for mobile safety
+  document.addEventListener("click", startMusic, { once: true });
+  document.addEventListener("touchstart", startMusic, { once: true });
+  document.addEventListener("scroll", startMusic, { once: true });
+
+});
