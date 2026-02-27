@@ -440,8 +440,8 @@ html {
   bottom: 25px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 105px;
-  color:  rgba(0, 0, 0, 0.85);
+  font-size: 100px;
+  color:  gold;
   cursor: pointer;
   animation: bounce 1s infinite;
   z-index: 9999;
@@ -451,6 +451,7 @@ html {
   0%, 100% { transform: translateX(-50%) translateY(0); }
   50% { transform: translateX(-50%) translateY(-10px); }
 }
+
 
 
 
